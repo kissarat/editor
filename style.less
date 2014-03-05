@@ -1,0 +1,223 @@
+@body_margin: 1cm;
+
+html {
+}
+
+body {
+  /*text-align: center;*/
+  bottom: 0;
+  top: 0;
+  right: 0;
+  margin: @body_margin;
+  counter-reset: pic;
+}
+
+form {
+  position: fixed;
+  text-align: left;
+  left: 4mm;
+}
+
+div {
+  vertical-align: middle;
+  width: 100%;
+}
+
+textarea {
+}
+
+#title {
+}
+
+#summary {
+}
+
+#content {
+  position: relative;
+  border: 1px solid black;
+  cursor: text;
+  bottom: 0;
+  overflow: scroll;
+  /*right: -5cm;*/
+  /*left: 5cm;*/
+  /*bottom: 2mm;*/
+}
+
+form > div:last-child {
+  text-align: right;
+  vertical-align: middle;
+}
+
+button {}
+
+div.toolbar > div:hover {
+}
+
+div.toolbar > img {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+div.toolbar > div > img:hover {
+  -webkit-filter: contrast(70%);
+}
+
+#publish, label[for=publish] {
+  float: left;
+}
+
+.info, .warning, .error {
+  display: none;
+  width: 100%;
+}
+
+.visible {
+  display: block;
+  margin: 2mm;
+}
+
+.info  {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+
+.warning {
+  background-color: rgba(255, 255, 0, 0.25);
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+#tableColumns, #tableRows {
+  display: inline-block;
+}
+
+table, td {
+  border: 1px solid black;
+}
+
+td {
+  min-width: 6mm;
+}
+
+tr {
+  min-height: 6mm;
+}
+
+.window {
+  position: fixed;
+  display: none;
+  width: 80%;
+  z-index: 2;
+  background-color: white;
+  margin: 10%;
+  padding: 2mm;
+}
+
+.window > .header {
+}
+
+img {
+  cursor: pointer;
+}
+
+.windowButtons {
+  display: inline;
+  float: right;
+  text-align: right;
+  width: 20%;
+}
+
+.windowToolbar {
+  display: inline;
+  float: left;
+  width: 70%;
+}
+
+.windowToolbar > img {
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+}
+
+#mainLayer {
+  position: fixed;
+  right: 2mm;
+}
+
+#obscuredLayer {
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  display: none;
+  background-color: rgba(0, 0, 0, 0.66);
+  z-index: 1;
+}
+
+.obscured {
+  user-select: none;
+  -webkit-filter: contrast(10%);
+}
+
+#tableWindow {
+  text-align: center;
+}
+
+#tableWindow table {
+  /*text-align: left;*/
+}
+
+#tableWindow .toolbar img {
+  margin: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#holder {
+  min-width: 300px;
+  min-height: 300px;
+  border: 1mm dashed gray;
+}
+
+input[type=file] {
+  /*display: none;*/
+}
+
+figure img {
+  z-index: -1;
+}
+
+figure, .img_layer {
+  /*position: absolute;*/
+}
+
+.img_layer {
+  opacity: .8;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+figcaption {
+  line-height: 12pt;
+}
+
+figcaption:before {
+  counter-increment: pic;
+  content: "Рис. " counter(pic) " ";
+}
+
+input[type=range] {
+  opacity: .8;
+}

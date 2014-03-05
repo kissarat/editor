@@ -1,0 +1,50 @@
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    title
+    link(rel='stylesheet', type='text/css', href='style.css')
+  body
+    #mainLayer
+      form#doc
+        .info
+        .warning
+        .error
+        input(type='hidden', name='id')
+        button#new(type='button') Новий
+        div
+          label Вид документу
+          select(tabindex='0', name='kind', autofocus='autofocus')
+            option(value='1') Методичні вказіки
+            option(value='2') Лекція
+          label №
+          input(tabindex='2', type='number', name='number', min='1', size='3')
+        div
+          input(tabindex='3', name='title', size='20', type='text', placeholder='Назва', required='required')
+        div
+          textarea(tabindex='4', name='summary', placeholder='Опис')
+        div
+          div
+            div
+              input#backColor(tabindex='-1', type='color', width='20')
+            div
+              input#foreColor(tabindex='-2', type='color', width='20')
+            select(tabindex='-3')
+              option Arial
+              option Curier New
+              option Impact
+              option Times New Roman
+            input#fontSize(tabindex='-4', type='number', value='12', min='10', max='18')
+          div(tabindex='5', name='content', contenteditable='true')
+          input#imageFile(type='file')
+        div
+          input#publish(tabindex='6', type='checkbox')
+          label(for='publish') публікувати
+          button(tabindex='7', type='submit') Зберегти
+    #obscuredLayer
+      #tableWindow.window
+      #imageWindow.window
+    script(type='text/javascript', src='app.js')
+    script(type='text/javascript', src='minimal.js')
+    script(type='text/javascript', src='editor.js')
+    script(type='text/javascript', src='window.js')
